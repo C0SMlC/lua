@@ -1,0 +1,148 @@
+/* Login Container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Login Box */
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.lock-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-box h1 {
+  color: #ff6b6b;
+  font-size: 1.8rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  border-color: #F075AE;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+input:disabled {
+  opacity: 0.6;
+}
+
+button.request-access-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d4a0b9, #F075AE);
+  color: #1a1a2e;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button.request-access-btn:hover:not(:disabled) {
+  box-shadow: 0 0 30px rgba(74, 222, 128, 0.5);
+}
+
+button.request-access-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Denied Message */
+.denied-message {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.denied-cat {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.denied-message p {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.denied-message span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+/* Tablet and up */
+@media (min-width: 480px) {
+  .login-box {
+    padding: 2rem;
+    max-width: 320px;
+  }
+
+  .login-box h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .login-container {
+    gap: 2rem;
+  }
+
+  .login-box {
+    padding: 2.5rem;
+    max-width: 380px;
+  }
+}

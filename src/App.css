@@ -1,0 +1,101 @@
+/* Mobile-first styles */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated stars background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 230px 80px, #fff, transparent),
+    radial-gradient(2px 2px at 300px 150px, rgba(255,255,255,0.7), transparent);
+  background-size: 350px 200px;
+  animation: twinkle 4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Cat Guards */
+.cat-guard {
+  width: 60px;
+  height: 75px;
+  flex-shrink: 0;
+}
+
+.cat-guard.left {
+  transform: scaleX(1);
+}
+
+.cat-guard.right {
+  transform: scaleX(-1);
+}
+
+/* Hint */
+.hint {
+  position: absolute;
+  bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0%, 80% { opacity: 0; }
+  100% { opacity: 0.5; }
+}
+
+/* Tablet and up */
+@media (min-width: 480px) {
+  .cat-guard {
+    width: 90px;
+    height: 112px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .cat-guard {
+    width: 120px;
+    height: 150px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .stars {
+    animation: none;
+  }
+  .hint {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+.request-access-btn{
+  background-color: #F075AE;
+}
